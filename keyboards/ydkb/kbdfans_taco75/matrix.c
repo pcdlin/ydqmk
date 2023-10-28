@@ -36,7 +36,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "rgblight.h"
 
 #undef DOUBLE_CLICK_FIX_DELAY
-#define DOUBLE_CLICK_FIX_DELAY 15
+#define DOUBLE_CLICK_FIX_DELAY 0
 
 extern debug_config_t debug_config;
 
@@ -54,6 +54,8 @@ static uint8_t get_key(void);
 static void init_cols(void);
 __attribute__ ((weak))
 void matrix_scan_user(void) {}
+
+void hook_keyboard_loop(void);
 
 __attribute__ ((weak))
 void matrix_scan_kb(void) {
@@ -203,6 +205,9 @@ static void select_key(uint8_t mode)
     }
     get_key_ready();
 }
+
+void bootmagic_lite_reset_eeprom(void);
+void bootloader_jump(void);
 
 void bootmagic_lite(void) {
     matrix_scan();
