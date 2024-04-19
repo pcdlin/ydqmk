@@ -8,7 +8,7 @@
 #endif
 
 #ifndef DEBOUNCE_DN
-#define DEBOUNCE_DN 5
+#define DEBOUNCE_DN 6
 #endif
 #ifndef DEBOUNCE16_DN
 #define DEBOUNCE16_DN DEBOUNCE_DN
@@ -22,7 +22,7 @@
 #endif
 
 #ifndef DEBOUNCE_UP
-#define DEBOUNCE_UP 5
+#define DEBOUNCE_UP 6
 #endif
 #ifndef DEBOUNCE16_UP
 #define DEBOUNCE16_UP DEBOUNCE_UP
